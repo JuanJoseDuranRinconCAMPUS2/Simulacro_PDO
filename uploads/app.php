@@ -79,9 +79,15 @@
     }
     spl_autoload_register('autoload');
 
+    //funciones work_references.
     // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->postWork_reference();
     // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->getAllWork_reference();
     // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->updateWork_reference();
-    work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->deleteWork_reference();
-        
+    // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->deleteWork_reference();
+    //funciones personal_ref.
+    // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->postPersonal_ref();
+    // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPersonal_reF();
+    // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->updatePersonal_ref();
+    personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->deletePersonal_ref();
+    
 ?>
