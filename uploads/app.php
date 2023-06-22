@@ -13,13 +13,54 @@
     }
     function autoload($class){
         //Directorios donde se buscan los archivos de clase
-        $directories = [
-            dirname(__DIR__).'/scripts/invoice/',
-            dirname(__DIR__).'/scripts/client/',
-            dirname(__DIR__).'/scripts/product/',
-            dirname(__DIR__).'/scripts/seller/',
-            dirname(__DIR__).'/scripts/db/',
-        ];
+
+        $TB = array(
+            "db",
+            "academic_area",
+            "admin_area",
+            "areas",
+            "campers",
+            "chapters",
+            "cities",
+            "contact_info",
+            "countries",
+            "design_area",
+            "emergency_contact",
+            "english_skills",
+            "journey",
+            "levels",
+            "locations",
+            "maint_area",
+            "marketing_area",
+            "modules",
+            "optional_topics",
+            "personal_ref",
+            "position",
+            "psychologist",
+            "regions",
+            "review_skills",
+            "routes",
+            "software_skills",
+            "soft_skills",
+            "staff",
+            "subjects",
+            "teachers",
+            "team_educators",
+            "team_schedule",
+            "thematic_units",
+            "themes",
+            "topics",
+            "trainers",
+            "tutors",
+            "working_info",
+            "work_reference"
+        );
+        $directories = array();
+        foreach ($TB as $name) {
+            $directory = dirname(__DIR__).'/scripts/'.$name.'/';
+            $directories[] = $directory;
+        }
+        
         //Convierte el nombre de la clase en un nombre de un archivo relativo
 
         $classFile = str_replace('\\', '/', $class) . '.php';
