@@ -79,7 +79,9 @@
     }
     spl_autoload_register('autoload');
 
-    // client::getInstance(json_decode(file_get_contents("php://input"), true))->postClient();
-    // client::getInstance(json_decode(file_get_contents("php://input"), true))->getAllClient();
-    
+    // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->postWork_reference();
+    // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->getAllWork_reference();
+    // work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->updateWork_reference();
+    work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->deleteWork_reference();
+        
 ?>
