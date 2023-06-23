@@ -94,9 +94,14 @@
     // countries::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCountries();
     // countries::getInstance(json_decode(file_get_contents("php://input"), true))->updateCountries();
     // countries::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCountries();
-     //funciones regions.
+    //funciones regions.
     // regions::getInstance(json_decode(file_get_contents("php://input"), true))->postRegions();
     // regions::getInstance(json_decode(file_get_contents("php://input"), true))->getAllRegions();
     // regions::getInstance(json_decode(file_get_contents("php://input"), true))->updateRegions();
-    regions::getInstance(json_decode(file_get_contents("php://input"), true))->deleteRegions();
+    // regions::getInstance(json_decode(file_get_contents("php://input"), true))->deleteRegions();
+    //funciones cities.
+    // cities::getInstance(json_decode(file_get_contents("php://input"), true))->postCities();
+    // cities::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCities();
+    // cities::getInstance(json_decode(file_get_contents("php://input"), true))->updateCities();
+    cities::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCities();
 ?>

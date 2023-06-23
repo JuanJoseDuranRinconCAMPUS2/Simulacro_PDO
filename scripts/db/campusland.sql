@@ -8,5 +8,7 @@ SELECT * FROM personal_ref;
 SELECT * FROM countries;
 
 SELECT * FROM regions;
+SELECT * FROM cities;
 
-SELECT id AS "identification" FROM countries ORDER BY id DESC LIMIT 1;
+
+SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
