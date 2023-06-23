@@ -119,5 +119,9 @@
     // journey::getInstance(json_decode(file_get_contents("php://input"), true))->getAllJourney();
     // journey::getInstance(json_decode(file_get_contents("php://input"), true))->updateJourney();
     // journey::getInstance(json_decode(file_get_contents("php://input"), true))->deleteJourney();
-?>
+    //funciones team_schedule.
+    // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->postTeam_schedule();
+    // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeam_schedule();
+    // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeam_schedule();
+    team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_schedule();
 ?>
