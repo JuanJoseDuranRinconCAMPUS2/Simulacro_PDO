@@ -109,4 +109,9 @@
     // areas::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAreas();
     // areas::getInstance(json_decode(file_get_contents("php://input"), true))->updateAreas();
     // areas::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAreas();
+    //funciones position.
+    // position::getInstance(json_decode(file_get_contents("php://input"), true))->postPosition();
+    // position::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPosition();
+    // position::getInstance(json_decode(file_get_contents("php://input"), true))->updatePosition();
+    // position::getInstance(json_decode(file_get_contents("php://input"), true))->deletePosition();
 ?>
