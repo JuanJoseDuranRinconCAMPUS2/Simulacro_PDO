@@ -123,5 +123,10 @@
     // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->postTeam_schedule();
     // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeam_schedule();
     // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeam_schedule();
-    team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_schedule();
+    // team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_schedule();
+    //funciones team_educators.
+    // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->postTeam_educators();
+    // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeam_educators();
+    // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeam_educators();
+    // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_educators();
 ?>
