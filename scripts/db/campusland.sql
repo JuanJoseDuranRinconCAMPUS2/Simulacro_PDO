@@ -9,6 +9,5 @@ SELECT * FROM countries;
 
 SELECT * FROM regions;
 SELECT * FROM cities;
-
-
+SELECT * FROM areas;
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;

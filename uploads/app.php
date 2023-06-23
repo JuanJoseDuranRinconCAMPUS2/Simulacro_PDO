@@ -103,5 +103,10 @@
     // cities::getInstance(json_decode(file_get_contents("php://input"), true))->postCities();
     // cities::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCities();
     // cities::getInstance(json_decode(file_get_contents("php://input"), true))->updateCities();
-    cities::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCities();
+    // cities::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCities();
+    //funciones areas.
+    // areas::getInstance(json_decode(file_get_contents("php://input"), true))->postAreas();
+    // areas::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAreas();
+    // areas::getInstance(json_decode(file_get_contents("php://input"), true))->updateAreas();
+    // areas::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAreas();
 ?>
