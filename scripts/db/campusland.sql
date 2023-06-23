@@ -15,6 +15,7 @@ select * FROM journey;
 SELECT * FROM team_schedule;
 SELECT * FROM team_educators;
 SELECT * FROM subjects;
+SELECT * FROM levels;
 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 

@@ -133,5 +133,10 @@
     // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
     // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
     // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
-    subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones levels.
+    levels::getInstance(json_decode(file_get_contents("php://input"), true))->postLevels();
+    levels::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLevels();
+    // levels::getInstance(json_decode(file_get_contents("php://input"), true))->updateLevels();
+    // levels::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLevels();
 ?>
