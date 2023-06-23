@@ -1,0 +1,57 @@
+{
+    "name": "juanj/simulacro_pdo",
+    "description": "...",
+    "autoload": {
+        "psr-4": {
+            "App\\": [
+                "./scripts",
+                "./scripts/academic_area",
+                "./scripts/admin_area",
+                "./scripts/areas",
+                "./scripts/campers",
+                "./scripts/chapters",
+                "./scripts/cities",
+                "./scripts/contact_info",
+                "./scripts/countries",
+                "./scripts/design_area",
+                "./scripts/emergency_contact",
+                "./scripts/english_skills",
+                "./scripts/journey",
+                "./scripts/levels",
+                "./scripts/locations",
+                "./scripts/maint_area",
+                "./scripts/marketing_area",
+                "./scripts/modules",
+                "./scripts/optional_topics",
+                "./scripts/personal_ref",
+                "./scripts/position",
+                "./scripts/psychologist",
+                "./scripts/regions",
+                "./scripts/review_skills",
+                "./scripts/routes",
+                "./scripts/software_skills",
+                "./scripts/soft_skills",
+                "./scripts/staff",
+                "./scripts/subjects",
+                "./scripts/teachers",
+                "./scripts/team_educators",
+                "./scripts/team_schedule",
+                "./scripts/thematic_units",
+                "./scripts/themes",
+                "./scripts/topics",
+                "./scripts/trainers",
+                "./scripts/tutors",
+                "./scripts/working_info",
+                "./scripts/work_reference",
+                "./scripts/db"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "JuanJoseDuranRinconCAMPUS2",
+            "email": "jduranrinconcampus@gmail.com"
+        }
+    ],
+    "require": {}
+}

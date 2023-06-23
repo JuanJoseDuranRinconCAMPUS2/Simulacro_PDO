@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class work_reference extends connect{
         private $queryPost= 'INSERT INTO work_reference(full_name,cel_number,position,company) VALUES(:name,:phone,:rol,:n_Company)';
         private $queryGetAll = 'SELECT id AS "N_id", full_name AS "name", cel_number AS "phone", position AS "rol", company AS "n_Company" FROM work_reference';
@@ -26,7 +27,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
