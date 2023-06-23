@@ -114,4 +114,10 @@
     // position::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPosition();
     // position::getInstance(json_decode(file_get_contents("php://input"), true))->updatePosition();
     // position::getInstance(json_decode(file_get_contents("php://input"), true))->deletePosition();
+    //funciones journey.
+    // journey::getInstance(json_decode(file_get_contents("php://input"), true))->postJourney();
+    // journey::getInstance(json_decode(file_get_contents("php://input"), true))->getAllJourney();
+    // journey::getInstance(json_decode(file_get_contents("php://input"), true))->updateJourney();
+    // journey::getInstance(json_decode(file_get_contents("php://input"), true))->deleteJourney();
+?>
 ?>
