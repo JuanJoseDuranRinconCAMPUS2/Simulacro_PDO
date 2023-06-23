@@ -135,8 +135,13 @@
     // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
     // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
     //funciones levels.
-    levels::getInstance(json_decode(file_get_contents("php://input"), true))->postLevels();
-    levels::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLevels();
+    // levels::getInstance(json_decode(file_get_contents("php://input"), true))->postLevels();
+    // levels::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLevels();
     // levels::getInstance(json_decode(file_get_contents("php://input"), true))->updateLevels();
     // levels::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLevels();
+    //funciones locations.
+    // locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
+    // locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
+    // locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
+    locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
 ?>
