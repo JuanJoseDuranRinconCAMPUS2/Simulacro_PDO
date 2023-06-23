@@ -129,4 +129,9 @@
     // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeam_educators();
     // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeam_educators();
     // team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_educators();
+    //funciones subjects.
+    // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
+    // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
+    // subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
+    subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
 ?>
