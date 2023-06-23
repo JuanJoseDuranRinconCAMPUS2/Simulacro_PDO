@@ -88,6 +88,10 @@
     // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->postPersonal_ref();
     // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPersonal_reF();
     // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->updatePersonal_ref();
-    personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->deletePersonal_ref();
-    
+    // personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->deletePersonal_ref();
+    // //funciones Countries.
+    // countries::getInstance(json_decode(file_get_contents("php://input"), true))->postCountries();
+    // countries::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCountries();
+    // countries::getInstance(json_decode(file_get_contents("php://input"), true))->updateCountries();
+    // countries::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCountries();
 ?>
