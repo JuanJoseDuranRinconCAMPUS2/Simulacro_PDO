@@ -74,11 +74,11 @@
     // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllRoutes();
     // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->updateRoutes();
     // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteRoutes();
-    //funciones locations.
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
+    //funciones thematic_units.
+    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->postThematic_units();
+    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThematic_units();
+    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->updateThematic_units();
+    \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThematic_units();
     //funciones locations.
     // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
     // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
