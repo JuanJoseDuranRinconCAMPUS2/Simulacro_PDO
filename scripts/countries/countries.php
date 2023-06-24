@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class countries extends connect{
         private $queryPost= 'INSERT INTO countries(name_country) VALUES(:N_Country)';
         private $queryGetAll = 'SELECT id AS "C_id", name_country AS "N_Country" FROM countries';
@@ -23,7 +24,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
@@ -48,7 +49,7 @@
                 $res = $this->conx->prepare($this->queryDelete);
                 $res->bindValue("C_id", $this->id); 
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{

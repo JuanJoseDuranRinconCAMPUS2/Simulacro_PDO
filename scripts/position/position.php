@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class position extends connect{
         private $queryPost = 'INSERT INTO `position` (name_position, arl) VALUES (:N_Position, :sure)';
         private $queryGetAll = 'SELECT id AS "P_id", name_position AS "N_Position", arl AS "sure" FROM `position`';
@@ -24,7 +25,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
@@ -50,7 +51,7 @@
                 $res = $this->conx->prepare($this->queryDelete);
                 $res->bindValue("P_id", $this->id); 
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{

@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class team_schedule extends connect{
         private function getLastJourneyForeignKey(){
             $getLastSeller = 'SELECT id AS "identification" FROM journey ORDER BY id DESC LIMIT 1;';
@@ -38,7 +39,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
@@ -71,7 +72,7 @@
                 $res = $this->conx->prepare($this->queryDelete);
                 $res->bindValue("T_id", $this->id); 
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{

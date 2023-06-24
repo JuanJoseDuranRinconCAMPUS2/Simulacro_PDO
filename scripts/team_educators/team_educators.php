@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class team_educators extends connect{
         private $queryPost= 'INSERT INTO team_educators(name_rol) VALUES(:N_Rol)';
         private $queryGetAll = 'SELECT id AS "T_id", name_rol AS "N_Rol" FROM team_educators';
@@ -23,7 +24,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
@@ -48,7 +49,7 @@
                 $res = $this->conx->prepare($this->queryDelete);
                 $res->bindValue("T_id", $this->id); 
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{

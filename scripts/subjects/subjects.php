@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class subjects extends connect{
         private $queryPost= 'INSERT INTO subjects(name_subject) VALUES(:N_Subject)';
         private $queryGetAll = 'SELECT id AS "S_id", name_subject AS "N_Subject" FROM subjects';
@@ -23,7 +24,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
@@ -48,7 +49,7 @@
                 $res = $this->conx->prepare($this->queryDelete);
                 $res->bindValue("S_id", $this->id); 
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{

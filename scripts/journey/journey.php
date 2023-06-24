@@ -1,4 +1,5 @@
 <?php
+    namespace App;
     class journey extends connect{
         private $queryPost = 'INSERT INTO `journey` (name_journey, check_in, check_out) VALUES (:N_Journey, :start_Date, :ending_Date)';
         private $queryGetAll = 'SELECT id AS "J_id", name_journey AS "N_Journey", check_in AS "start_Date", check_out AS "ending_Date" FROM `journey`';
@@ -25,7 +26,7 @@
             try {
                 $res = $this->conx->prepare($this->queryGetAll);
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
@@ -52,7 +53,7 @@
                 $res = $this->conx->prepare($this->queryDelete);
                 $res->bindValue("J_id", $this->id); 
                 $res->execute();
-                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(PDO::FETCH_ASSOC)];
+                $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
             } catch(\PDOException $e) {
                 $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
             }finally{
