@@ -69,5 +69,20 @@
     // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
     // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
     // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
+    //funciones routes.
+    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->postRoutes();
+    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllRoutes();
+    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->updateRoutes();
+    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteRoutes();
+    //funciones locations.
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
+    //funciones locations.
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
+    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
     
 ?>
