@@ -124,11 +124,11 @@
     // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllDesign_area();
     // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateDesign_area();
     // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteDesign_area();
-     //funciones teachers.
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones emergency_contact.
+    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->postEmergency_contact();
+    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->getAllEmergency_contact();
+    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->updateEmergency_contact();
+    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->deleteEmergency_contact();
      //funciones teachers.
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
