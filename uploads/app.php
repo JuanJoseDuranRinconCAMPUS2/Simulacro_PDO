@@ -114,9 +114,9 @@
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
-    //funciones subjects.
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones contact_info.
+    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->postContact_info();
+    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->getAllContact_info();
+    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->updateContact_info();
+    \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->deleteContact_info();
 ?>
