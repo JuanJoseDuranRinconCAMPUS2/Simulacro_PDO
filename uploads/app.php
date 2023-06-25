@@ -89,9 +89,29 @@
     // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThemes();
     // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->updateThemes();
     // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThemes();
-    //funciones modules.
-    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->postModules();
-    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->getAllModules();
-    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->updateModules();
-    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->deleteModules();
+    //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+    //funciones subjects.
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones subjects.
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones subjects.
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones subjects.
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
+    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
 ?>
