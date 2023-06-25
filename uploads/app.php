@@ -83,6 +83,15 @@
     // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->postChapters();
     // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->getAllChapters();
     // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->updateChapters();
-    \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->deleteChapters();
-    
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->deleteChapters();
+    //funciones themes.
+    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->postThemes();
+    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThemes();
+    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->updateThemes();
+    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThemes();
+    //funciones chapters.
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->postChapters();
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->getAllChapters();
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->updateChapters();
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->deleteChapters();
 ?>

@@ -20,7 +20,7 @@ SELECT * FROM locations;
 SELECT * FROM routes;
 SELECT * FROM thematic_units;
 SELECT * FROM chapters;
-
+SELECT * FROM themes;
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
 SELECT id AS "identification" FROM journey ORDER BY id DESC LIMIT 1;

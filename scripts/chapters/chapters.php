@@ -70,10 +70,11 @@
 
     // {
     //     "id" : "3",
-    //     "name_route" : "sql",
-    //     "start_date" : "2023:05:16",
-    //     "end_date" : "2023:06:20",
-    //     "description" : "ruta donde los campers aprenderan php",
-    //     "duration_month" : "1"
-    // }
+    //     "id_thematic_units" : "3",
+    //     "name_chapter" : "herobrine",
+    //     "start_date" : "2023:03:16",
+    //     "end_date" : "2023:05:16",
+    //     "description" : "aqui se vera terminal",
+    //     "duration_days" : "60"
+    //  }
 ?>
