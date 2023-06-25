@@ -89,9 +89,9 @@
     // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThemes();
     // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->updateThemes();
     // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThemes();
-    //funciones chapters.
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->postChapters();
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->getAllChapters();
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->updateChapters();
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->deleteChapters();
+    //funciones modules.
+    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->postModules();
+    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->getAllModules();
+    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->updateModules();
+    // \App\modules::getInstance(json_decode(file_get_contents("php://input"), true))->deleteModules();
 ?>
