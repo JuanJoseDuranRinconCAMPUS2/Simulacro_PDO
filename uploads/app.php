@@ -94,11 +94,11 @@
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
-    //funciones subjects.
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones staff.
+    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->postStaff();
+    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->getAllStaff();
+    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->updateStaff();
+    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->deleteStaff();
     //funciones subjects.
     // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
     // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
