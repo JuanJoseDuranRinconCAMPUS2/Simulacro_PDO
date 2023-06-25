@@ -78,11 +78,11 @@
     // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->postThematic_units();
     // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThematic_units();
     // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->updateThematic_units();
-    \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThematic_units();
-    //funciones locations.
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
+    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThematic_units();
+    //funciones chapters.
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->postChapters();
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->getAllChapters();
+    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->updateChapters();
+    \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->deleteChapters();
     
 ?>

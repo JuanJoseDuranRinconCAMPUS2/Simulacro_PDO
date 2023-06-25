@@ -19,6 +19,7 @@ SELECT * FROM levels;
 SELECT * FROM locations;
 SELECT * FROM routes;
 SELECT * FROM thematic_units;
+SELECT * FROM chapters;
 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
