@@ -104,11 +104,11 @@
     // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAcademic_area();
     // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateAcademic_area();
     // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAcademic_area();
-    //funciones subjects.
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
+    //funciones teachers.
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
     //funciones subjects.
     // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
     // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
