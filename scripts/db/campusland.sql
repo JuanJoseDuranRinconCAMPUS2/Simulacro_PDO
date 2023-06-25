@@ -25,6 +25,7 @@ SELECT * FROM modules;
 SELECT * FROM topics;
 SELECT * FROM staff;
 SELECT * FROM academic_area;
+SELECT * FROM admin_area;
 SELECT * FROM teachers;
 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
