@@ -28,6 +28,8 @@ SELECT * FROM academic_area;
 SELECT * FROM admin_area;
 SELECT * FROM teachers;
 SELECT * FROM contact_info;
+SELECT * FROM design_area;
+
 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 

@@ -104,7 +104,7 @@
     // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAcademic_area();
     // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateAcademic_area();
     // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAcademic_area();
-    //funciones academic_area.
+    //funciones admin_area.
     // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->postAdmin_area();
     // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAdmin_area();
     // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateAdmin_area();
@@ -118,5 +118,36 @@
     // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->postContact_info();
     // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->getAllContact_info();
     // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->updateContact_info();
-    \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->deleteContact_info();
+    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->deleteContact_info();
+     //funciones design_area.
+    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->postDesign_area();
+    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllDesign_area();
+    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateDesign_area();
+    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteDesign_area();
+     //funciones teachers.
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones teachers.
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones teachers.
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones teachers.
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones teachers.
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
+    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+
 ?>
