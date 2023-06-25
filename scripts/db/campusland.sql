@@ -24,6 +24,8 @@ SELECT * FROM themes;
 SELECT * FROM modules;
 SELECT * FROM topics;
 SELECT * FROM staff;
+SELECT * FROM academic_area;
+
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
 SELECT id AS "identification" FROM journey ORDER BY id DESC LIMIT 1;
