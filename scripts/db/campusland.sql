@@ -38,6 +38,7 @@ SELECT * FROM working_info;
 SELECT * FROM trainers;
 SELECT * FROM campers;
 SELECT * FROM optional_topics;
+SELECT * FROM review_skills;
 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
