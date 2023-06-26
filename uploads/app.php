@@ -139,11 +139,11 @@
     // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllMaint_area();
     // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateMaint_area();
     // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteMaint_area();
-     //funciones teachers.
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones marketing_area.
+    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->postMarketing_area();
+    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllMarketing_area();
+    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateMarketing_area();
+    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteMarketing_area();
      //funciones teachers.
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
