@@ -164,11 +164,11 @@
     // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTrainers();
     // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTrainers();
     // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTrainers();
-     //funciones topics.
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones campers.
+    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->postCampers();
+    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCampers();
+    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->updateCampers();
+    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCampers());
      //funciones topics.
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();

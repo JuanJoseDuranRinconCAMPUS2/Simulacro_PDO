@@ -36,6 +36,7 @@ SELECT * FROM psychologist;
 SELECT * FROM tutors; 
 SELECT * FROM working_info;
 SELECT * FROM trainers;
+SELECT * FROM campers;
 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
