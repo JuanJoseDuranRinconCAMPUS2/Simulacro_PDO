@@ -187,7 +187,7 @@
      //funciones soft_skills.
     // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postSoft_skills();
     // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSoft_skills();
-    \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateSoft_skills();
+    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateSoft_skills();
     // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSoft_skills();
 
 ?>

@@ -51,3 +51,6 @@ INSERT INTO team_schedule(team_name, check_in_skills, check_out_skills, check_in
 SELECT team_name AS "N_Team", check_in_skills AS "start_Skills", check_out_skills AS "ending_Skills", check_in_soft AS "start_Soft", check_out_soft AS "ending_Soft", check_in_english AS "start_English", check_out_english AS "ending_English", check_in_review AS "start_Review", check_out_review AS "ending_Review", id_journey AS "ID_Journey" FROM team_schedule;
 INSERT INTO staff(doc, first_name,second_name,first_surname,second_surname,eps,id_area,id_city) VALUES(:ID_fModule,:1name,:2name,:1surname,:2surname,:
 health_Insurance,:ID_fArea,:ID_fCity);
+
+
+

@@ -1,12 +1,7 @@
 <?php
     namespace App;
     class regions extends connect{
-        private function getLastCountryForeignKey(){
-            $getLastSeller = 'SELECT id AS "identification" FROM countries ORDER BY id DESC LIMIT 1;';
-            $foreignKeySeller = $this->conx->prepare($getLastSeller);
-            $foreignKeySeller->execute();
-            return $foreignKeySeller->fetchColumn();
-        }
+        
         private $queryPost= 'INSERT INTO regions(name_region, id_country) VALUES(:N_Region, :ID_fCuontry)';
         private $queryGetAll = 'SELECT id AS "R_id", name_region AS "N_Region", id_country AS "ID_fCuontry" FROM regions';
         private $queryUpdate = 'UPDATE regions SET name_region = :N_Region WHERE id = :R_id';
@@ -18,7 +13,7 @@
             try {
                 $res = $this->conx->prepare($this->queryPost);
                 $res->bindValue("N_Region", $this->name_region);
-                $res->bindValue("ID_fCuontry", $this->getLastCountryForeignKey());
+                $res->bindValue("ID_fCuontry", $this->id_country);
                 $res->execute();
                 $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
             } catch (\PDOException $e) {
@@ -43,6 +38,7 @@
                 $res = $this->conx->prepare($this->queryUpdate);
                 $res->bindValue("R_id", $this->id);
                 $res->bindValue("N_Region", $this->name_region);
+                $res->bindValue("ID_fCuontry", $this->id_country);
                 $res->execute();
                 $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
             } catch (\PDOException $e) {
