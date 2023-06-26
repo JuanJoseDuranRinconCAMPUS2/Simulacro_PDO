@@ -129,11 +129,11 @@
     // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->getAllEmergency_contact();
     // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->updateEmergency_contact();
     // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->deleteEmergency_contact();
-     //funciones teachers.
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones english_skills.
+    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postEnglish_skills();
+    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllEnglish_skills();
+    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateEnglish_skills();
+    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteEnglish_skills();
      //funciones teachers.
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
     // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
