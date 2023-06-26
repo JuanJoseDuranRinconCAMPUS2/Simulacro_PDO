@@ -149,5 +149,45 @@
     // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPsychologist();
     // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->updatePsychologist();
     // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->deletePsychologist();
+     //funciones tutors.
+    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->postTutors();
+    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTutors();
+    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->updateTutors();
+    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTutors();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones topics.
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
+    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
 
 ?>

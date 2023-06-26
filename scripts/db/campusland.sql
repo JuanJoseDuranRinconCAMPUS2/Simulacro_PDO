@@ -33,6 +33,7 @@ SELECT * FROM emergency_contact;
 SELECT * FROM english_skills;
 SELECT * FROM maint_area;
 SELECT * FROM psychologist;
+SELECT * FROM tutors; 
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
 SELECT id AS "identification" FROM journey ORDER BY id DESC LIMIT 1;
