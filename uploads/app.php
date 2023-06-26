@@ -159,11 +159,11 @@
     // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->getAllWorking_info();
     // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->updateWorking_info();
     // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->deleteWorking_info();
-     //funciones topics.
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones trainers.
+    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->postTrainers();
+    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTrainers();
+    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTrainers();
+    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTrainers();
      //funciones topics.
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
     // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
