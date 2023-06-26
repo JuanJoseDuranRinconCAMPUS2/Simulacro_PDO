@@ -144,10 +144,10 @@
     // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllMarketing_area();
     // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateMarketing_area();
     // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteMarketing_area();
-     //funciones teachers.
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
+     //funciones psychologist.
+    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->postPsychologist();
+    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPsychologist();
+    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->updatePsychologist();
+    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->deletePsychologist();
 
 ?>
