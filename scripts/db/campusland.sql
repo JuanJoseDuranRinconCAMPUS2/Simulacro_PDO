@@ -31,8 +31,7 @@ SELECT * FROM contact_info;
 SELECT * FROM design_area;
 SELECT * FROM emergency_contact;
 SELECT * FROM english_skills;
-
-
+SELECT * FROM maint_area;
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
 SELECT id AS "identification" FROM journey ORDER BY id DESC LIMIT 1;
