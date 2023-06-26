@@ -40,6 +40,8 @@ SELECT * FROM campers;
 SELECT * FROM optional_topics;
 SELECT * FROM review_skills;
 SELECT * FROM software_skills;
+SELECT * FROM soft_skills;
+
 SELECT id AS "identification" FROM regions ORDER BY id DESC LIMIT 1;
 
 SELECT id AS "identification" FROM journey ORDER BY id DESC LIMIT 1;

@@ -184,10 +184,10 @@
     // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSoftware_skills();
     // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateSoftware_skills();
     // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSoftware_skills();
-     //funciones topics.
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
+     //funciones soft_skills.
+    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postSoft_skills();
+    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSoft_skills();
+    \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateSoft_skills();
+    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSoft_skills();
 
 ?>
