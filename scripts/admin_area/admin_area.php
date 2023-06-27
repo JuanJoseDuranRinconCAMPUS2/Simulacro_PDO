@@ -27,11 +27,11 @@ class admin_area extends connect{
         try {
             $res = $this->conx->prepare($this->queryGetAll);
             $res->execute();
-            $this->message = ["Code"=> 200, "Message"=> $res->fetchAll(\PDO::FETCH_ASSOC)];
+            $this->message = $res->fetchAll(\PDO::FETCH_ASSOC);
         } catch(\PDOException $e) {
             $this->message = ["Code"=> $e->getCode(), "Message"=> $res->errorInfo()[2]];
         }finally{
-            print_r($this->message);
+            echo json_encode($this->message);
         }
     }
     public function updateAdmin_area(){

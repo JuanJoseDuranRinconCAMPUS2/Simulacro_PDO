@@ -1,3 +1,4 @@
+
 // SIDEBAR DROPDOWN
 const allDropdown = document.querySelectorAll('#sidebar .side-dropdown');
 const sidebar = document.getElementById('sidebar');
@@ -124,6 +125,3 @@ allProgress.forEach(item=> {
 	item.style.setProperty('--value', item.dataset.value)
 })
 
-const url = window.location.href;
-const nuevaURL = url.replace('/index.html', '/uploads');
-console.log(nuevaURL);
