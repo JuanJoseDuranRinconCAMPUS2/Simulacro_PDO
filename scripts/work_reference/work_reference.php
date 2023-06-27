@@ -7,7 +7,7 @@
         private $queryDelete = 'DELETE FROM `work_reference` WHERE `work_reference`.`id` = :N_id';
         private $message;
         use getInstance;
-        function __construct(private $ID = 0, private $full_name = 1, private $cel_number = 1, private $position = 1, public $company = 1){parent::__construct();}
+        function __construct(private $id = 0, private $full_name = 1, private $cel_number = 1, private $position = 1, public $company = 1){parent::__construct();}
         public function postWork_reference(){
             try {
                 $res = $this->conx->prepare($this->queryPost);

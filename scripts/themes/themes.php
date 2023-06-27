@@ -7,7 +7,7 @@
         private $queryDelete = 'DELETE FROM `themes` WHERE `id` = :T_id';
         private $message;
         use getInstance;
-        function __construct(private $id = 0, private $id_chapter, private $name_theme = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
+        function __construct(private $id = 0, private $id_chapter = 1, private $name_theme = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
         public function postThemes(){
             try {
                 $res = $this->conx->prepare($this->queryPost);

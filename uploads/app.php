@@ -2,192 +2,843 @@
     namespace App;
         
     require "../vendor/autoload.php";
+    $router = new \Bramus\Router\Router();
 
-
-    // funciones work_references.
-    // \App\work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->postWork_reference();
-    // \App\work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->getAllWork_reference();
-    // \App\work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->updateWork_reference();
-    // \App\work_reference::getInstance(json_decode(file_get_contents("php://input"), true))->deleteWork_reference();
-    //  funciones personal_ref.
-    // \App\personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->postPersonal_ref();
-    // \App\personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPersonal_reF();
-    // \App\personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->updatePersonal_ref();
-    // \App\personal_ref::getInstance(json_decode(file_get_contents("php://input"), true))->deletePersonal_ref();
-    //funciones Countries.
-    // \App\countries::getInstance(json_decode(file_get_contents("php://input"), true))->postCountries();
-    // \App\countries::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCountries();
-    // \App\countries::getInstance(json_decode(file_get_contents("php://input"), true))->updateCountries();
-    // \App\countries::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCountries();
-    //funciones regions.
-    // \App\regions::getInstance(json_decode(file_get_contents("php://input"), true))->postRegions();
-    // \App\regions::getInstance(json_decode(file_get_contents("php://input"), true))->getAllRegions();
-    // \App\regions::getInstance(json_decode(file_get_contents("php://input"), true))->updateRegions();
-    // \App\regions::getInstance(json_decode(file_get_contents("php://input"), true))->deleteRegions();
-    //funciones cities.
-    // \App\cities::getInstance(json_decode(file_get_contents("php://input"), true))->postCities();
-    // \App\cities::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCities();
-    // \App\cities::getInstance(json_decode(file_get_contents("php://input"), true))->updateCities();
-    // \App\cities::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCities();
-    //funciones areas.
-    // \App\areas::getInstance(json_decode(file_get_contents("php://input"), true))->postAreas();
-    // \App\areas::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAreas();
-    // \App\areas::getInstance(json_decode(file_get_contents("php://input"), true))->updateAreas();
-    // \App\areas::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAreas();
-    //funciones position.
-    // \App\position::getInstance(json_decode(file_get_contents("php://input"), true))->postPosition();
-    // \App\position::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPosition();
-    // \App\position::getInstance(json_decode(file_get_contents("php://input"), true))->updatePosition();
-    // \App\position::getInstance(json_decode(file_get_contents("php://input"), true))->deletePosition();
-    //funciones journey.
-    // \App\journey::getInstance(json_decode(file_get_contents("php://input"), true))->postJourney();
-    // \App\journey::getInstance(json_decode(file_get_contents("php://input"), true))->getAllJourney();
-    // \App\journey::getInstance(json_decode(file_get_contents("php://input"), true))->updateJourney();
-    // \App\journey::getInstance(json_decode(file_get_contents("php://input"), true))->deleteJourney();
-    //funciones team_schedule.
-    // \App\team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->postTeam_schedule();
-    // \App\team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeam_schedule();
-    // \App\team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeam_schedule();
-    // \App\team_schedule::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_schedule();
-    //funciones team_educators.
-    // \App\team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->postTeam_educators();
-    // \App\team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeam_educators();
-    // \App\team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeam_educators();
-    // \App\team_educators::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeam_educators();
-    //funciones subjects.
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->postSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->updateSubjects();
-    // \App\subjects::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSubjects();
-    //funciones levels.
-    // \App\levels::getInstance(json_decode(file_get_contents("php://input"), true))->postLevels();
-    // \App\levels::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLevels();
-    // \App\levels::getInstance(json_decode(file_get_contents("php://input"), true))->updateLevels();
-    // \App\levels::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLevels();
-    //funciones locations.
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->postLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->getAllLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->updateLocations();
-    // \App\locations::getInstance(json_decode(file_get_contents("php://input"), true))->deleteLocations();
-    //funciones routes.
-    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->postRoutes();
-    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllRoutes();
-    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->updateRoutes();
-    // \App\routes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteRoutes();
-    //funciones thematic_units.
-    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->postThematic_units();
-    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThematic_units();
-    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->updateThematic_units();
-    // \App\thematic_units::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThematic_units();
-    //funciones chapters.
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->postChapters();
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->getAllChapters();
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->updateChapters();
-    // \App\chapters::getInstance(json_decode(file_get_contents("php://input"), true))->deleteChapters();
-    //funciones themes.
-    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->postThemes();
-    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->getAllThemes();
-    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->updateThemes();
-    // \App\themes::getInstance(json_decode(file_get_contents("php://input"), true))->deleteThemes();
-    //funciones topics.
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->postTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateTopics();
-    // \App\topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTopics();
-    //funciones staff.
-    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->postStaff();
-    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->getAllStaff();
-    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->updateStaff();
-    // \App\staff::getInstance(json_decode(file_get_contents("php://input"), true))->deleteStaff();
-    //funciones academic_area.
-    // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->postAcademic_area();
-    // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAcademic_area();
-    // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateAcademic_area();
-    // \App\academic_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAcademic_area();
-    //funciones admin_area.
-    // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->postAdmin_area();
-    // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllAdmin_area();
-    // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateAdmin_area();
-    // \App\admin_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteAdmin_area();
-    //funciones teachers.
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->postTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTeachers();
-    // \App\teachers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTeachers();
-    //funciones contact_info.
-    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->postContact_info();
-    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->getAllContact_info();
-    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->updateContact_info();
-    // \App\contact_info::getInstance(json_decode(file_get_contents("php://input"), true))->deleteContact_info();
-     //funciones design_area.
-    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->postDesign_area();
-    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllDesign_area();
-    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateDesign_area();
-    // \App\design_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteDesign_area();
-     //funciones emergency_contact.
-    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->postEmergency_contact();
-    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->getAllEmergency_contact();
-    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->updateEmergency_contact();
-    // \App\emergency_contact::getInstance(json_decode(file_get_contents("php://input"), true))->deleteEmergency_contact();
-     //funciones english_skills.
-    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postEnglish_skills();
-    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllEnglish_skills();
-    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateEnglish_skills();
-    // \App\english_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteEnglish_skills();
-     //funciones maint_area.
-    // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->postMaint_area();
-    // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllMaint_area();
-    // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateMaint_area();
-    // \App\maint_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteMaint_area();
-     //funciones marketing_area.
-    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->postMarketing_area();
-    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->getAllMarketing_area();
-    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->updateMarketing_area();
-    // \App\marketing_area::getInstance(json_decode(file_get_contents("php://input"), true))->deleteMarketing_area();
-     //funciones psychologist.
-    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->postPsychologist();
-    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->getAllPsychologist();
-    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->updatePsychologist();
-    // \App\psychologist::getInstance(json_decode(file_get_contents("php://input"), true))->deletePsychologist();
-     //funciones tutors.
-    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->postTutors();
-    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTutors();
-    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->updateTutors();
-    // \App\tutors::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTutors();
-     //funciones working_info.
-    // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->postWorking_info();
-    // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->getAllWorking_info();
-    // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->updateWorking_info();
-    // \App\working_info::getInstance(json_decode(file_get_contents("php://input"), true))->deleteWorking_info();
-     //funciones trainers.
-    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->postTrainers();
-    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllTrainers();
-    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->updateTrainers();
-    // \App\trainers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteTrainers();
-     //funciones campers.
-    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->postCampers();
-    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->getAllCampers();
-    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->updateCampers();
-    // \App\campers::getInstance(json_decode(file_get_contents("php://input"), true))->deleteCampers());
-     //funciones optional_topics.
-    // \App\optional_topics::getInstance(json_decode(file_get_contents("php://input"), true))->postOptional_topics();
-    // \App\optional_topics::getInstance(json_decode(file_get_contents("php://input"), true))->getAllOptional_topics();
-    // \App\optional_topics::getInstance(json_decode(file_get_contents("php://input"), true))->updateOptional_topics();
-    // \App\optional_topics::getInstance(json_decode(file_get_contents("php://input"), true))->deleteOptional_topics();
-     //funciones review_skills.
-    // \App\review_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postReview_skills();
-    // \App\review_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllReview_skills();
-    // \App\review_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateReview_skills();
-    // \App\review_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteReview_skills();
-     //funciones software_skills.
-    // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postSoftware_skills();
-    // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSoftware_skills();
-    // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateSoftware_skills();
-    // \App\software_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSoftware_skills();
-     //funciones soft_skills.
-    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->postSoft_skills();
-    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->getAllSoft_skills();
-    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->updateSoft_skills();
-    // \App\soft_skills::getInstance(json_decode(file_get_contents("php://input"), true))->deleteSoft_skills();
-
+    $router->mount("/academic_area", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\academic_area::getInstance($data);
+            $ruta->getAllAcademic_area();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\academic_area::getInstance($data);
+            $ruta->postAcademic_area();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\academic_area::getInstance($data);
+            $ruta->updateAcademic_area();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\academic_area::getInstance($data);
+            $ruta->deleteAcademic_area();
+        });
+    });
+    $router->mount("/admin_area", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\admin_area::getInstance($data);
+            $ruta->getAllAdmin_area();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\admin_area::getInstance($data);
+            $ruta->postAdmin_area();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\admin_area::getInstance($data);
+            $ruta->updateAdmin_area();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\admin_area::getInstance($data);
+            $ruta->deleteAdmin_area();
+        });
+    });
+    $router->mount("/areas", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\areas::getInstance($data);
+            $ruta->getAllAreas();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\areas::getInstance($data);
+            $ruta->postAreas();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\areas::getInstance($data);
+            $ruta->updateAreas();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\areas::getInstance($data);
+            $ruta->deleteAreas();
+        });
+    });
+    $router->mount("/campers", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\campers::getInstance($data);
+            $ruta->getAllCampers();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\campers::getInstance($data);
+            $ruta->postCampers();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\campers::getInstance($data);
+            $ruta->updateCampers();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\campers::getInstance($data);
+            $ruta->deleteCampers();
+        });
+    });
+    $router->mount("/chapters", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\chapters::getInstance($data);
+            $ruta->getAllChapters();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\chapters::getInstance($data);
+            $ruta->postChapters();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\chapters::getInstance($data);
+            $ruta->updateChapters();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\chapters::getInstance($data);
+            $ruta->deleteChapters();
+        });
+    });
+    $router->mount("/cities", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\cities::getInstance($data);
+            $ruta->getAllCities();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\cities::getInstance($data);
+            $ruta->postCities();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\cities::getInstance($data);
+            $ruta->updateCities();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\cities::getInstance($data);
+            $ruta->deleteCities();
+        });
+    });
+    $router->mount("/contact_info", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\contact_info::getInstance($data);
+            $ruta->getAllContact_info();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\contact_info::getInstance($data);
+            $ruta->postContact_info();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\contact_info::getInstance($data);
+            $ruta->updateContact_info();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\contact_info::getInstance($data);
+            $ruta->deleteContact_info();
+        });
+    });
+    $router->mount("/countries", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\countries::getInstance($data);
+            $ruta->getAllCountries();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\countries::getInstance($data);
+            $ruta->postCountries();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\countries::getInstance($data);
+            $ruta->updateCountries();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\countries::getInstance($data);
+            $ruta->deleteCountries();
+        });
+    });
+    $router->mount("/design_area", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\design_area::getInstance($data);
+            $ruta->getAllDesign_area();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\design_area::getInstance($data);
+            $ruta->postDesign_area();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\design_area::getInstance($data);
+            $ruta->updateDesign_area();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\design_area::getInstance($data);
+            $ruta->deleteDesign_area();
+        });
+    });
+    $router->mount("/emergency_contact", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\emergency_contact::getInstance($data);
+            $ruta->getAllEmergency_contact();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\emergency_contact::getInstance($data);
+            $ruta->postEmergency_contact();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\emergency_contact::getInstance($data);
+            $ruta->updateEmergency_contact();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\emergency_contact::getInstance($data);
+            $ruta->deleteEmergency_contact();
+        });
+    });
+    $router->mount("/english_skills", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\english_skills::getInstance($data);
+            $ruta->getAllEnglish_skills();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\english_skills::getInstance($data);
+            $ruta->postEnglish_skills();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\english_skills::getInstance($data);
+            $ruta->updateEnglish_skills();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\english_skills::getInstance($data);
+            $ruta->deleteEnglish_skills();
+        });
+    });
+    $router->mount("/journey", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\journey::getInstance($data);
+            $ruta->getAllJourney();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\journey::getInstance($data);
+            $ruta->postJourney();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\journey::getInstance($data);
+            $ruta->updateJourney();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\journey::getInstance($data);
+            $ruta->deleteJourney();
+        });
+    });
+    $router->mount("/levels", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\levels::getInstance($data);
+            $ruta->getAllLevels();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\levels::getInstance($data);
+            $ruta->postLevels();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\levels::getInstance($data);
+            $ruta->updateLevels();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\levels::getInstance($data);
+            $ruta->deleteLevels();
+        });
+    });
+    $router->mount("/locations", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\locations::getInstance($data);
+            $ruta->getAllLocations();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\locations::getInstance($data);
+            $ruta->postLocations();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\locations::getInstance($data);
+            $ruta->updateLocations();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\locations::getInstance($data);
+            $ruta->deleteLocations();
+        });
+    });
+    $router->mount("/maint_area", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\maint_area::getInstance($data);
+            $ruta->getAllMaint_area();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\maint_area::getInstance($data);
+            $ruta->postMaint_area();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\maint_area::getInstance($data);
+            $ruta->updateMaint_area();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\maint_area::getInstance($data);
+            $ruta->deleteMaint_area();
+        });
+    });
+    $router->mount("/marketing_area", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\marketing_area::getInstance($data);
+            $ruta->getAllMarketing_area();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\marketing_area::getInstance($data);
+            $ruta->postMarketing_area();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\marketing_area::getInstance($data);
+            $ruta->updateMarketing_area();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\marketing_area::getInstance($data);
+            $ruta->deleteMarketing_area();
+        });
+    });
+    $router->mount("/modules", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\modules::getInstance($data);
+            $ruta->getAllModules();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\modules::getInstance($data);
+            $ruta->postModules();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\modules::getInstance($data);
+            $ruta->updateModules();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\modules::getInstance($data);
+            $ruta->deleteModules();
+        });
+    });
+    $router->mount("/optional_topics", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\optional_topics::getInstance($data);
+            $ruta->getAllOptional_topics();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\optional_topics::getInstance($data);
+            $ruta->postOptional_topics();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\optional_topics::getInstance($data);
+            $ruta->updateOptional_topics();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\optional_topics::getInstance($data);
+            $ruta->deleteOptional_topics();
+        });
+    });
+    $router->mount("/personal_ref", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\personal_ref::getInstance($data);
+            $ruta->getAllPersonal_reF();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\personal_ref::getInstance($data);
+            $ruta->postPersonal_ref();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\personal_ref::getInstance($data);
+            $ruta->updatePersonal_ref();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\personal_ref::getInstance($data);
+            $ruta->deletePersonal_ref();
+        });
+    });
+    $router->mount("/position", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\position::getInstance($data);
+            $ruta->getAllPosition();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\position::getInstance($data);
+            $ruta->postPosition();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\position::getInstance($data);
+            $ruta->updatePosition();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\position::getInstance($data);
+            $ruta->deletePosition();
+        });
+    });
+    $router->mount("/psychologist", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\psychologist::getInstance($data);
+            $ruta->getAllPsychologist();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\psychologist::getInstance($data);
+            $ruta->postPsychologist();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\psychologist::getInstance($data);
+            $ruta->updatePsychologist();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\psychologist::getInstance($data);
+            $ruta->deletePsychologist();
+        });
+    });
+    $router->mount("/regions", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\regions::getInstance($data);
+            $ruta->getAllRegions();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\regions::getInstance($data);
+            $ruta->postRegions();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\regions::getInstance($data);
+            $ruta->updateRegions();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\regions::getInstance($data);
+            $ruta->deleteRegions();
+        });
+    });
+    $router->mount("/review_skills", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\review_skills::getInstance($data);
+            $ruta->getAllReview_skills();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\review_skills::getInstance($data);
+            $ruta->postReview_skills();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\review_skills::getInstance($data);
+            $ruta->updateReview_skills();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\review_skills::getInstance($data);
+            $ruta->deleteReview_skills();
+        });
+    });
+    $router->mount("/routes", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\routes::getInstance($data);
+            $ruta->getAllRoutes();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\routes::getInstance($data);
+            $ruta->postRoutes();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\routes::getInstance($data);
+            $ruta->updateRoutes();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\routes::getInstance($data);
+            $ruta->deleteRoutes();
+        });
+    });
+    $router->mount("/software_skills", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\software_skills::getInstance($data);
+            $ruta->getAllSoftware_skills();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\software_skills::getInstance($data);
+            $ruta->postSoftware_skills();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\software_skills::getInstance($data);
+            $ruta->updateSoftware_skills();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\software_skills::getInstance($data);
+            $ruta->deleteSoftware_skills();
+        });
+    });
+    $router->mount("/soft_skills", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\soft_skills::getInstance($data);
+            $ruta->getAllSoft_skills();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\soft_skills::getInstance($data);
+            $ruta->postSoft_skills();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\soft_skills::getInstance($data);
+            $ruta->updateSoft_skills();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\soft_skills::getInstance($data);
+            $ruta->deleteSoft_skills();
+        });
+    });
+    $router->mount("/staff", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\staff::getInstance($data);
+            $ruta->getAllStaff();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\staff::getInstance($data);
+            $ruta->postStaff();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\staff::getInstance($data);
+            $ruta->updateStaff();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\staff::getInstance($data);
+            $ruta->deleteStaff();
+        });
+    });
+    $router->mount("/subjects", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\subjects::getInstance($data);
+            $ruta->getAllSubjects();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\subjects::getInstance($data);
+            $ruta->postSubjects();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\subjects::getInstance($data);
+            $ruta->updateSubjects();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\subjects::getInstance($data);
+            $ruta->deleteSubjects();
+        });
+    });
+    $router->mount("/teachers", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\teachers::getInstance($data);
+            $ruta->getAllTeachers();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\teachers::getInstance($data);
+            $ruta->postTeachers();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\teachers::getInstance($data);
+            $ruta->updateTeachers();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\teachers::getInstance($data);
+            $ruta->deleteTeachers();
+        });
+    });
+    $router->mount("/team_educators", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_educators::getInstance($data);
+            $ruta->getAllTeam_educators();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_educators::getInstance($data);
+            $ruta->postTeam_educators();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_educators::getInstance($data);
+            $ruta->updateTeam_educators();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_educators::getInstance($data);
+            $ruta->deleteTeam_educators();
+        });
+    });
+    $router->mount("/team_schedule", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_schedule::getInstance($data);
+            $ruta->getAllTeam_schedule();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_schedule::getInstance($data);
+            $ruta->postTeam_schedule();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_schedule::getInstance($data);
+            $ruta->updateTeam_schedule();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\team_schedule::getInstance($data);
+            $ruta->deleteTeam_schedule();
+        });
+    });
+    $router->mount("/thematic_units", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\thematic_units::getInstance($data);
+            $ruta->getAllThematic_units();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\thematic_units::getInstance($data);
+            $ruta->postThematic_units();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\thematic_units::getInstance($data);
+            $ruta->updateThematic_units();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\thematic_units::getInstance($data);
+            $ruta->deleteThematic_units();
+        });
+    });
+    $router->mount("/themes", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\themes::getInstance($data);
+            $ruta->getAllThemes();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\themes::getInstance($data);
+            $ruta->postThemes();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\themes::getInstance($data);
+            $ruta->updateThemes();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\themes::getInstance($data);
+            $ruta->deleteThemes();
+        });
+    });
+    $router->mount("/topics", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\topics::getInstance($data);
+            $ruta->getAllTopics();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\topics::getInstance($data);
+            $ruta->postTopics();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\topics::getInstance($data);
+            $ruta->updateTopics();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\topics::getInstance($data);
+            $ruta->deleteTopics();
+        });
+    });
+    $router->mount("/trainers", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\trainers::getInstance($data);
+            $ruta->getAllTrainers();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\trainers::getInstance($data);
+            $ruta->postTrainers();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\trainers::getInstance($data);
+            $ruta->updateTrainers();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\trainers::getInstance($data);
+            $ruta->deleteTrainers();
+        });
+    });
+    $router->mount("/tutors", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\tutors::getInstance($data);
+            $ruta->getAllTutors();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\tutors::getInstance($data);
+            $ruta->postTutors();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\tutors::getInstance($data);
+            $ruta->updateTutors();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\tutors::getInstance($data);
+            $ruta->deleteTutors();
+        });
+    });
+    $router->mount("/working_info", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\working_info::getInstance($data);
+            $ruta->getAllWorking_info();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\working_info::getInstance($data);
+            $ruta->postWorking_info();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\working_info::getInstance($data);
+            $ruta->updateWorking_info();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\working_info::getInstance($data);
+            $ruta->deleteWorking_info();
+        });
+    });
+    $router->mount("/work_reference", function() use($router) {
+        $router->get("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\work_reference::getInstance($data);
+            $ruta->getAllWork_reference();
+        });
+        $router->post("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\postWork_reference::getInstance($data);
+            $ruta->postTutors();
+        });
+        $router->put("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\work_reference::getInstance($data);
+            $ruta->updateWork_reference();
+        });
+        $router->delete("/", function(){
+            $data = json_decode(file_get_contents("php://input"), true);
+            $ruta = \App\work_reference::getInstance($data);
+            $ruta->deleteWork_reference();
+        });
+    });
+    $router->run();
 ?>

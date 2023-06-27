@@ -7,7 +7,7 @@
         private $queryDelete = 'DELETE FROM `thematic_units` WHERE `id` = :T_id';
         private $message;
         use getInstance;
-        function __construct(private $id = 0, private $id_route, private $name_thematics_units = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
+        function __construct(private $id = 0, private $id_route = 1, private $name_thematics_units = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
         public function postThematic_units(){
             try {
                 $res = $this->conx->prepare($this->queryPost);

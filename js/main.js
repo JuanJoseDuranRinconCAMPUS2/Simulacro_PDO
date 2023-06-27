@@ -5,7 +5,7 @@ allDropdown.forEach(item=> {
 	const a = item.parentElement.querySelector('a:first-child');
 	a.addEventListener('click', function (e) {
 		e.preventDefault();
-
+		
 		if(!this.classList.contains('active')) {
 			allDropdown.forEach(i=> {
 				const aLink = i.parentElement.querySelector('a:first-child');
@@ -123,3 +123,7 @@ const allProgress = document.querySelectorAll('main .card .progress');
 allProgress.forEach(item=> {
 	item.style.setProperty('--value', item.dataset.value)
 })
+
+const url = window.location.href;
+const nuevaURL = url.replace('/index.html', '/uploads');
+console.log(nuevaURL);

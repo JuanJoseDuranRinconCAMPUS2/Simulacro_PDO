@@ -7,7 +7,7 @@
         private $queryDelete = 'DELETE FROM `chapters` WHERE `id` = :C_id';
         private $message;
         use getInstance;
-        function __construct(private $id = 0, private $id_thematic_units, private $name_chapter = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
+        function __construct(private $id = 0, private $id_thematic_units=1, private $name_chapter = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
         public function postChapters(){
             try {
                 $res = $this->conx->prepare($this->queryPost);
