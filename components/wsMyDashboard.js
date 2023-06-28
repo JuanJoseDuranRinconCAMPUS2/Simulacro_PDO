@@ -5,9 +5,9 @@ export let wsMyDashboard = {
             <div id="contenedor">
                 <h1 class="title">Dashboard</h1>
                 <ul class="breadcrumbs">
-                    <li><a href="#">Home</a></li>
+                    <li><a>Home</a></li>
                     <li class="divider">/</li>
-                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a class="active">Dashboard</a></li>
                 </ul>
                 <div class="info-data">
                     <div class="card">
