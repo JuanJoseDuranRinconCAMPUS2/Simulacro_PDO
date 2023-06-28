@@ -23,10 +23,9 @@ async function boardsClick(){
       console.error(error);
   });
 }
-async function DeleteClick(){
+async function DeleteClick(optionLink){
   const tablesDelete = new Promise((resolve, reject) => {
     const selectorDelete= document.querySelectorAll(".DELETE");
-    console.log(selectorDelete);
     if (selectorDelete) {
       resolve(selectorDelete);
      
@@ -35,14 +34,24 @@ async function DeleteClick(){
     }
   });
   tablesDelete.then((selectorDelete) => {
+    const modal = document.querySelector('.modal');
+    const closeModal = document.querySelector('.modal__close');
     selectorDelete.forEach(option => option.addEventListener("click", (event) => {
       const optionId = event.currentTarget.id;
-      console.log(optionId);
-  }));
-    
-}).catch((error) => {
-    console.error(error);
-});
+      const DeleteID = {"id": optionId}
+      var fila = option.parentNode.parentNode;
+      fila.parentNode.removeChild(fila)
+      metodos.deteleData(optionLink, DeleteID);
+      modal.classList.add('modal--show');
+      
+    }));
+    closeModal.addEventListener('click', (e)=>{
+      e.preventDefault();
+      modal.classList.remove('modal--show');
+    });
+  }).catch((error) => {
+      console.error(error);
+  });
 }
 async function Theader(data) {
   const theaderPromesa = new Promise((resolve, reject) => {
@@ -62,7 +71,7 @@ async function Theader(data) {
       console.error(error);
   });
 }
-async function Tbody(data) {
+async function Tbody(data, option) {
   const tbodyPromesa = new Promise((resolve, reject) => {
     const Tbody= document.querySelector("#Tbody");
     if (Tbody) {
@@ -91,7 +100,7 @@ async function Tbody(data) {
       Tbody.appendChild(tr)
     };
     /* controlador boton delete*/
-    DeleteClick();
+    DeleteClick(option);
   }).catch((error) => {
       console.error(error);
   });
@@ -114,7 +123,7 @@ function IntroTables(option, data) {
     console.log(data);
     setTimeout(() => {
       Theader(data);
-      Tbody(data);
+      Tbody(data, option);
     }, 100);
   }).catch((error) => {
     console.error(error);

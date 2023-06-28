@@ -148,7 +148,7 @@ li {
 	transition: all .15s ease;
 }
 #sidebar .side-dropdown.show {
-	max-height: 1000px;
+	max-height: 2000px;
 }
 #sidebar .side-dropdown a:hover {
 	color: var(--blue);
@@ -580,6 +580,54 @@ main .btn-send:hover {
 /* MAIN */
 /* CONTENT */
 
+/* MODAL */
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #111111bd;
+	display: flex;
+	z-index: 3;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s .6s;
+	--transform: translateY(-100vh);
+	--transition: transform .3s;
+}
+.modal--show{
+	opacity: 1;
+	pointer-events: unset;
+	transition: opacity .3s;
+	--transform: translateY(0);
+	--transition: transform .3s .3s;
+}
+.modal__container{
+	margin: auto;
+	width: 90%;
+	max-width: 600px;
+	max-height: 90%;
+	background-color: #fff;
+	border-radius: 6px;
+	padding: 3em 2.5em;
+	display: grid;
+	gap: 1em;
+	place-items: center;
+	grid-auto-columns: 100%;
+	transform: var(--transform);
+	transition:var(--transition);
+}
+.modal__title{
+	font-size: 2.5rem;
+}
+.modal__paragraph{
+	margin-bottom: 10px;
+}
+.modal__img{
+	width: 90%;
+	max-width: 300px;
+}
 /*botones*/
 button {
 	padding: 10px 20px;

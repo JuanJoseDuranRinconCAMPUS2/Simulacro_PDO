@@ -48,14 +48,14 @@ async function putData(option, data){
         console.error('Error:', error);
       });
 }
-async function deteleData(option) {
+async function deteleData(option, id) {
     const url = `${URLT}/${option}`;
     fetch(url, {
     method: 'DELETE',
     headers: {
         'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(id),
     })
     .then(response => response.json())
     .then(result => {
