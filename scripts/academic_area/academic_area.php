@@ -7,14 +7,14 @@ class academic_area extends connect{
     private $queryDelete = 'DELETE FROM academic_area WHERE id = :A_id';
     private $message;
     use getInstance;
-    function __construct(private $id = 0, private $id_area = 1, private $id_staff = 1, private $id_position = 1, private $id_journeys = 1){parent::__construct();}
+    function __construct(private $id = 0, private $id_areas = 1, private $id_staff = 1, private $id_position = 1, private $id_journey = 1){parent::__construct();}
     public function postAcademic_area(){
         try {
             $res = $this->conx->prepare($this->queryPost);
-            $res->bindValue("ID_fArea", $this->id_area);
+            $res->bindValue("ID_fArea", $this->id_areas);
             $res->bindValue("ID_fStaff", $this->id_staff);
             $res->bindValue("ID_fPosition", $this->id_position);
-            $res->bindValue("ID_fJourneys", $this->id_journeys);
+            $res->bindValue("ID_fJourneys", $this->id_journey);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {
@@ -38,10 +38,10 @@ class academic_area extends connect{
         try {
             $res = $this->conx->prepare($this->queryUpdate);
             $res->bindValue("A_id", $this->id);
-            $res->bindValue("ID_fArea", $this->id_area);
+            $res->bindValue("ID_fArea", $this->id_areas);
             $res->bindValue("ID_fStaff", $this->id_staff);
             $res->bindValue("ID_fPosition", $this->id_position);
-            $res->bindValue("ID_fJourneys", $this->id_journeys);
+            $res->bindValue("ID_fJourneys", $this->id_journey);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {

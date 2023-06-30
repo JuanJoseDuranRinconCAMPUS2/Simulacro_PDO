@@ -7,16 +7,16 @@ class trainers extends connect{
     private $queryDelete = 'DELETE FROM trainers WHERE id = :T_id';
     private $message;
     use getInstance;
-    function __construct(private $id = 1, private $id_staff = 1, private $id_level = 1, private $id_route = 1, private $id_academic_area = 1, private $id_position = 1, private $id_team_educator = 1){parent::__construct();}
+    function __construct(private $id = 1, private $id_staff = 1, private $id_levels = 1, private $id_routes = 1, private $id_academic_area = 1, private $id_position = 1, private $id_team_educators = 1){parent::__construct();}
     public function postTrainers(){
         try {
             $res = $this->conx->prepare($this->queryPost);
             $res->bindValue("ID_fStaff", $this->id_staff);
-            $res->bindValue("ID_fLevel", $this->id_level);
-            $res->bindValue("ID_fRoute", $this->id_route);
+            $res->bindValue("ID_fLevel", $this->id_levels);
+            $res->bindValue("ID_fRoute", $this->id_routes);
             $res->bindValue("ID_fAcademicArea", $this->id_academic_area);
             $res->bindValue("ID_fPosition", $this->id_position);
-            $res->bindValue("ID_fTeamEducator", $this->id_team_educator);
+            $res->bindValue("ID_fTeamEducator", $this->id_team_educators);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {
@@ -41,11 +41,11 @@ class trainers extends connect{
             $res = $this->conx->prepare($this->queryUpdate);
             $res->bindValue("T_id", $this->id);
             $res->bindValue("ID_fStaff", $this->id_staff);
-            $res->bindValue("ID_fLevel", $this->id_level);
-            $res->bindValue("ID_fRoute", $this->id_route);
+            $res->bindValue("ID_fLevel", $this->id_levels);
+            $res->bindValue("ID_fRoute", $this->id_routes);
             $res->bindValue("ID_fAcademicArea", $this->id_academic_area);
             $res->bindValue("ID_fPosition", $this->id_position);
-            $res->bindValue("ID_fTeamEducator", $this->id_team_educator);
+            $res->bindValue("ID_fTeamEducator", $this->id_team_educators);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {

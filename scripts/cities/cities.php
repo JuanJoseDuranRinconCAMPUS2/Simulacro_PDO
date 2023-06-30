@@ -7,12 +7,12 @@
         private $queryDelete = 'DELETE FROM `cities` WHERE `cities`.`id` = :C_id';
         private $message;
         use getInstance;
-        function __construct(private $id = 0, private $name_city = 1, private $id_region = 1){parent::__construct();}
+        function __construct(private $id = 0, private $name_city = 1, private $id_regions = 1){parent::__construct();}
         public function postCities(){
             try {
                 $res = $this->conx->prepare($this->queryPost);
                 $res->bindValue("N_City", $this->name_city);
-                $res->bindValue("ID_fRegions", $this->id_region);
+                $res->bindValue("ID_fRegions", $this->id_regions);
                 $res->execute();
                 $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
             } catch (\PDOException $e) {
@@ -37,7 +37,7 @@
                 $res = $this->conx->prepare($this->queryUpdate);
                 $res->bindValue("C_id", $this->id);
                 $res->bindValue("N_City", $this->name_city);
-                $res->bindValue("ID_fRegions", $this->id_region);
+                $res->bindValue("ID_fRegions", $this->id_regions);
                 $res->execute();
                 $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
             } catch (\PDOException $e) {

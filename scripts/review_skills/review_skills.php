@@ -8,14 +8,14 @@ class review_skills extends connect{
     private $message;
     use getInstance;
     
-    function __construct(private $id = 0, private $id_team_schedule = 1, private $id_journey = 1, private $id_tutor = 1, private $id_location = 1) {parent::__construct();}
+    function __construct(private $id = 0, private $id_team_schedule = 1, private $id_journey = 1, private $id_tutors = 1, private $id_locations = 1) {parent::__construct();}
     public function postReview_skills(){
         try {
             $res = $this->conx->prepare($this->queryPost);
             $res->bindValue("ID_fTeamSchedule", $this->id_team_schedule);
             $res->bindValue("ID_fJourney", $this->id_journey);
-            $res->bindValue("ID_fTutor", $this->id_tutor);
-            $res->bindValue("ID_fLocation", $this->id_location);
+            $res->bindValue("ID_fTutor", $this->id_tutors);
+            $res->bindValue("ID_fLocation", $this->id_locations);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {
@@ -41,8 +41,8 @@ class review_skills extends connect{
             $res->bindValue("R_id", $this->id);
             $res->bindValue("ID_fTeamSchedule", $this->id_team_schedule);
             $res->bindValue("ID_fJourney", $this->id_journey);
-            $res->bindValue("ID_fTutor", $this->id_tutor);
-            $res->bindValue("ID_fLocation", $this->id_location);
+            $res->bindValue("ID_fTutor", $this->id_tutors);
+            $res->bindValue("ID_fLocation", $this->id_locations);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {

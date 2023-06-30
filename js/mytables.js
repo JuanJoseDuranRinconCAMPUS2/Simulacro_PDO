@@ -41,7 +41,7 @@ async function DeleteClick(optionLink){
       const DeleteID = {"id": optionId}
       var fila = option.parentNode.parentNode;
       fila.parentNode.removeChild(fila)
-      metodos.deteleData(optionLink, DeleteID);
+// +       metodos.deteleData(optionLink, DeleteID);
       modal.classList.add('modal--show');
       
     }));

@@ -7,7 +7,7 @@
         private $queryDelete = 'DELETE FROM staff WHERE id = :S_id';
         private $message;
         use getInstance;
-        function __construct(private $id = 0, private $doc = 1, private $first_name = 1, private $second_name = 1, private $first_surname = 1, public $second_surname = 1, public $eps = 1, public $id_area = 1, public $id_city = 1){parent::__construct();}
+        function __construct(private $id = 0, private $doc = 1, private $first_name = 1, private $second_name = 1, private $first_surname = 1, public $second_surname = 1, public $eps = 1, public $id_areas = 1, public $id_cities = 1){parent::__construct();}
         public function postStaff(){
             try {
                 $res = $this->conx->prepare($this->queryPost);
@@ -17,8 +17,8 @@
                 $res->bindValue("1surname", $this->first_surname);
                 $res->bindValue("2surname", $this->second_surname);
                 $res->bindValue("health_Insurance", $this->eps);
-                $res->bindValue("ID_fArea", $this->id_area);
-                $res->bindValue("ID_fCity", $this->id_city);
+                $res->bindValue("ID_fArea", $this->id_areas);
+                $res->bindValue("ID_fCity", $this->id_cities);
                 $res->execute();
                 $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
             } catch (\PDOException $e) {
@@ -48,8 +48,8 @@
                 $res->bindValue("1surname", $this->first_surname);
                 $res->bindValue("2surname", $this->second_surname);
                 $res->bindValue("health_Insurance", $this->eps);
-                $res->bindValue("ID_fArea", $this->id_area);
-                $res->bindValue("ID_fCity", $this->id_city);
+                $res->bindValue("ID_fArea", $this->id_areas);
+                $res->bindValue("ID_fCity", $this->id_cities);
                 $res->execute();
                 $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
             } catch (\PDOException $e) {

@@ -53,4 +53,12 @@ INSERT INTO staff(doc, first_name,second_name,first_surname,second_surname,eps,i
 health_Insurance,:ID_fArea,:ID_fCity);
 
 
+SELECT table_schema
+FROM information_schema.tables
+WHERE table_name = 'routes';
+SELECT column_name
+FROM information_schema.columns
+WHERE table_schema = 'table_schema'
+AND table_name = 'routes';
 
+SHOW COLUMNS FROM routes;

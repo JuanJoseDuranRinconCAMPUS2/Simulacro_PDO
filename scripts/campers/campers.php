@@ -7,16 +7,16 @@ class campers extends connect{
     private $queryDelete = 'DELETE FROM campers WHERE id = :C_id';
     private $message;
     use getInstance;
-    function __construct(private $id = 0, private $id_team_schedule = 1, private $id_route = 1, private $id_trainer = 1, private $id_psycologist = 1, private $id_teacher = 1, private $id_level = 1, private $id_journey = 1, private $id_staff = 1) {parent::__construct();}
+    function __construct(private $id = 0, private $id_team_schedule = 1, private $id_routes = 1, private $id_trainers = 1, private $id_psychologist = 1, private $id_teachers = 1, private $id_levels = 1, private $id_journey = 1, private $id_staff = 1) {parent::__construct();}
     public function postCampers(){
         try {
             $res = $this->conx->prepare($this->queryPost);
             $res->bindValue("ID_fTeamSchedule", $this->id_team_schedule);
-            $res->bindValue("ID_fRoute", $this->id_route);
-            $res->bindValue("ID_fTrainer", $this->id_trainer);
-            $res->bindValue("ID_fPsycologist", $this->id_psycologist);
-            $res->bindValue("ID_fTeacher", $this->id_teacher);
-            $res->bindValue("ID_fLevel", $this->id_level);
+            $res->bindValue("ID_fRoute", $this->id_routes);
+            $res->bindValue("ID_fTrainer", $this->id_trainers);
+            $res->bindValue("ID_fPsycologist", $this->id_psychologist);
+            $res->bindValue("ID_fTeacher", $this->id_teachers);
+            $res->bindValue("ID_fLevel", $this->id_levels);
             $res->bindValue("ID_fJourney", $this->id_journey);
             $res->bindValue("ID_fStaff", $this->id_staff);
             $res->execute();
@@ -43,11 +43,11 @@ class campers extends connect{
             $res = $this->conx->prepare($this->queryUpdate);
             $res->bindValue("C_id", $this->id);
             $res->bindValue("ID_fTeamSchedule", $this->id_team_schedule);
-            $res->bindValue("ID_fRoute", $this->id_route);
-            $res->bindValue("ID_fTrainer", $this->id_trainer);
-            $res->bindValue("ID_fPsycologist", $this->id_psycologist);
-            $res->bindValue("ID_fTeacher", $this->id_teacher);
-            $res->bindValue("ID_fLevel", $this->id_level);
+            $res->bindValue("ID_fRoute", $this->id_routes);
+            $res->bindValue("ID_fTrainer", $this->id_trainers);
+            $res->bindValue("ID_fPsycologist", $this->id_psychologist);
+            $res->bindValue("ID_fTeacher", $this->id_teachers);
+            $res->bindValue("ID_fLevel", $this->id_levels);
             $res->bindValue("ID_fJourney", $this->id_journey);
             $res->bindValue("ID_fStaff", $this->id_staff);
             $res->execute();

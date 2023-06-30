@@ -8,15 +8,15 @@ class optional_topics extends connect{
     private $message;
     use getInstance;
     
-    function __construct(private $id = 0, private $id_topic = 1, private $id_team = 1, private $id_subject = 1, private $id_camper = 1, private $id_team_educator = 1) {parent::__construct();}
+    function __construct(private $id = 0, private $id_topics = 1, private $id_team_schedule = 1, private $id_subjects = 1, private $id_campers = 1, private $id_team_educators = 1) {parent::__construct();}
     public function postOptional_topics(){
         try {
             $res = $this->conx->prepare($this->queryPost);
-            $res->bindValue("ID_fTopic", $this->id_topic);
-            $res->bindValue("ID_fTeam", $this->id_team);
-            $res->bindValue("ID_fSubject", $this->id_subject);
-            $res->bindValue("ID_fCamper", $this->id_camper);
-            $res->bindValue("ID_fTeamEducator", $this->id_team_educator);
+            $res->bindValue("ID_fTopic", $this->id_topics);
+            $res->bindValue("ID_fTeam", $this->id_team_schedule);
+            $res->bindValue("ID_fSubject", $this->id_subjects);
+            $res->bindValue("ID_fCamper", $this->id_campers);
+            $res->bindValue("ID_fTeamEducator", $this->id_team_educators);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {
@@ -40,11 +40,11 @@ class optional_topics extends connect{
         try {
             $res = $this->conx->prepare($this->queryUpdate);
             $res->bindValue("O_id", $this->id);
-            $res->bindValue("ID_fTopic", $this->id_topic);
-            $res->bindValue("ID_fTeam", $this->id_team);
-            $res->bindValue("ID_fSubject", $this->id_subject);
-            $res->bindValue("ID_fCamper", $this->id_camper);
-            $res->bindValue("ID_fTeamEducator", $this->id_team_educator);
+            $res->bindValue("ID_fTopic", $this->id_topics);
+            $res->bindValue("ID_fTeam", $this->id_team_schedule);
+            $res->bindValue("ID_fSubject", $this->id_subjects);
+            $res->bindValue("ID_fCamper", $this->id_campers);
+            $res->bindValue("ID_fTeamEducator", $this->id_team_educators);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {

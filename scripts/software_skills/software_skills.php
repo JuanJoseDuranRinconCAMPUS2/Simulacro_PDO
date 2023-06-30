@@ -8,15 +8,15 @@ class software_skills extends connect{
     private $message;
     use getInstance;
     
-    function __construct(private $id = 0, private $id_team_schedule = 1, private $id_journey = 1, private $id_trainer = 1, private $id_location = 1, private $id_subject = 1) {parent::__construct();}
+    function __construct(private $id = 0, private $id_team_schedule = 1, private $id_journey = 1, private $id_trainers = 1, private $id_locations = 1, private $id_subjects = 1) {parent::__construct();}
     public function postSoftware_skills(){
         try {
             $res = $this->conx->prepare($this->queryPost);
             $res->bindValue("ID_fTeamSchedule", $this->id_team_schedule);
             $res->bindValue("ID_fJourney", $this->id_journey);
-            $res->bindValue("ID_fTrainer", $this->id_trainer);
-            $res->bindValue("ID_fLocation", $this->id_location);
-            $res->bindValue("ID_fSubject", $this->id_subject);
+            $res->bindValue("ID_fTrainer", $this->id_trainers);
+            $res->bindValue("ID_fLocation", $this->id_locations);
+            $res->bindValue("ID_fSubject", $this->id_subjects);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {
@@ -42,9 +42,9 @@ class software_skills extends connect{
             $res->bindValue("S_id", $this->id);
             $res->bindValue("ID_fTeamSchedule", $this->id_team_schedule);
             $res->bindValue("ID_fJourney", $this->id_journey);
-            $res->bindValue("ID_fTrainer", $this->id_trainer);
-            $res->bindValue("ID_fLocation", $this->id_location);
-            $res->bindValue("ID_fSubject", $this->id_subject);
+            $res->bindValue("ID_fTrainer", $this->id_trainers);
+            $res->bindValue("ID_fLocation", $this->id_locations);
+            $res->bindValue("ID_fSubject", $this->id_subjects);
             $res->execute();
             $this->message = ["Code" => 200+$res->rowCount(), "Message" => "the data were inserted correctly"];
         } catch (\PDOException $e) {

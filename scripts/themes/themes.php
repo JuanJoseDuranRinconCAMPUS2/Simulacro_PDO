@@ -7,12 +7,12 @@
         private $queryDelete = 'DELETE FROM `themes` WHERE `id` = :T_id';
         private $message;
         use getInstance;
-        function __construct(private $id = 0, private $id_chapter = 1, private $name_theme = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
+        function __construct(private $id = 0, private $id_chapters = 1, private $name_theme = 1, private $start_date = 1, private $end_date = 1, public $description = 1, public $duration_days = 1){parent::__construct();}
         public function postThemes(){
             try {
                 $res = $this->conx->prepare($this->queryPost);
                 $res->bindValue("name", $this->name_theme);
-                $res->bindValue("ID_fChapter", $this->id_chapter);
+                $res->bindValue("ID_fChapter", $this->id_chapters);
                 $res->bindValue("StartDate", $this->start_date);
                 $res->bindValue("endingDate", $this->end_date);
                 $res->bindValue("outline", $this->description);
@@ -41,7 +41,7 @@
                 $res = $this->conx->prepare($this->queryUpdate);
                 $res->bindValue("T_id", $this->id);
                 $res->bindValue("name", $this->name_theme);
-                $res->bindValue("ID_fChapter", $this->id_chapter);
+                $res->bindValue("ID_fChapter", $this->id_chapters);
                 $res->bindValue("StartDate", $this->start_date);
                 $res->bindValue("endingDate", $this->end_date);
                 $res->bindValue("outline", $this->description);

@@ -9,6 +9,7 @@ async function getData(option){
     .then(response => response.json())
     .then(data => {
         mytables.IntroTables(option, data);
+        getID(option);
     })
     .catch(error => {
     console.error('Error:', error);
@@ -65,16 +66,41 @@ async function deteleData(option, id) {
     console.error('Error:', error);
     });
 }
+async function getID(option){   
+  const url = `${URLT}/${option}`;
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const ids = [];
+    const firstItem = data[0];
+    const idProperty = Object.keys(firstItem)[0];
+    data.forEach(item => {
+        if (item.hasOwnProperty(idProperty)) {
+          ids.push(item[idProperty]);
+        }
+      });
+    console.log(ids);
+  }
+  )
+  .catch(error => {
+  console.error('Error:', error);
+  });
+}
 function clearContent() {
     const mainElement = document.querySelector('.content');
     if (mainElement) {
       mainElement.innerHTML = '';
     }
-  }
+}
+function extractIds(data) {
+  const ids = data.map(item => item.A_id);
+  return ids;
+}
 export default{
     getData,
     postData,
     putData,
     deteleData,
+    getID,
     clearContent
 }
