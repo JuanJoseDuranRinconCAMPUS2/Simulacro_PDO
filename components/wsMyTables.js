@@ -25,6 +25,8 @@ export let wsMyTables= {
                         <tbody id="Tbody">
                         </tbody>
                     </div>
+                    <br>
+                    <button class="Post" id="post"> Añadir Datos!</button>
                 </table>
                 </div>
             
@@ -40,16 +42,20 @@ export let wsMyTables= {
             </div>
         </section>
         <section class="modalPost">
-            <form id= "FormPost">
-            
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-        <section class="modalPut>
-            <form id= "FormPut">
+            <div class="modal__container">
+                <form id= "FormPost">
                 
-                <button type="submit">Enviar</button>
-            </form>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <section class="modalPut">
+            <div class="modal__container">
+                <form id= "FormPut">
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </section>
         `
     },
@@ -325,7 +331,7 @@ export let wsMyTables= {
     modules(p1){
         return`
             <label for="id_theme">Tema:</label>
-            <select name="id_theme" id="id_theme" required>
+            <select name="id_themes" id="id_themes" required>
             </select>
         
             <label for="name_module">Nombre del Módulo:</label>

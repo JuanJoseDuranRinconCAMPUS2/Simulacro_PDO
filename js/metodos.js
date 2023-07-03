@@ -9,7 +9,6 @@ async function getData(option){
     .then(response => response.json())
     .then(data => {
         mytables.IntroTables(option, data);
-        getID(option);
     })
     .catch(error => {
     console.error('Error:', error);
@@ -66,7 +65,7 @@ async function deteleData(option, id) {
     console.error('Error:', error);
     });
 }
-async function getID(option){   
+async function getID(option, select){   
   const url = `${URLT}/${option}`;
   fetch(url)
   .then(response => response.json())
@@ -79,7 +78,9 @@ async function getID(option){
           ids.push(item[idProperty]);
         }
       });
-    console.log(ids);
+    ids.forEach(id => {
+      select.insertAdjacentHTML('beforeend', `<option value="${id}">${id}</option>`);
+    });
   }
   )
   .catch(error => {
@@ -91,10 +92,6 @@ function clearContent() {
     if (mainElement) {
       mainElement.innerHTML = '';
     }
-}
-function extractIds(data) {
-  const ids = data.map(item => item.A_id);
-  return ids;
 }
 export default{
     getData,

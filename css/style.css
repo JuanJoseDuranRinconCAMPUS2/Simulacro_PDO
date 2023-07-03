@@ -581,7 +581,7 @@ main .btn-send:hover {
 /* CONTENT */
 
 /* MODAL */
-.modal{
+.modal, .modalPost, .modalPut{
 	position: fixed;
 	top: 0;
 	left: 0;
