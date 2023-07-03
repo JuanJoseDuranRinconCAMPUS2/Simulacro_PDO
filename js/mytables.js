@@ -41,7 +41,7 @@ async function DeleteClick(optionLink){
       const DeleteID = {"id": optionId}
       var fila = option.parentNode.parentNode;
       fila.parentNode.removeChild(fila)
-// +       metodos.deteleData(optionLink, DeleteID);
++     metodos.deteleData(optionLink, DeleteID);
       modal.classList.add('modal--show');
       
     }));
@@ -153,7 +153,7 @@ wsForm.then(() => {
   console.error(error);
 });
 }
-async function buttonPOST(){
+async function buttonPOST(option){
   const postPromesa = new Promise((resolve, reject) => {
     const buttonP = document.querySelector(".Post");
     if (buttonP) {
@@ -165,6 +165,13 @@ async function buttonPOST(){
   });
   postPromesa.then((buttonP) => {
     const modal = document.querySelector('.modalPost');
+    const formPost = document.querySelector("#FormPost");
+    formPost.addEventListener("submit", (e)=>{
+      e.preventDefault(); 
+      let df = Object.fromEntries(new FormData(e.target));
+      metodos.postData(option, df);
+      formPost.reset();
+    });
     buttonP.addEventListener("click", (event) => {
       modal.classList.add('modal--show');
     }); 

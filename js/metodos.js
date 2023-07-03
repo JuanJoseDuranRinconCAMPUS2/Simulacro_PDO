@@ -14,7 +14,7 @@ async function getData(option){
     console.error('Error:', error);
     });
 }
-async function postData(option) {
+async function postData(option, data) {
     const url = `${URLT}/${option}`;
     fetch(url, {
     method: 'POST',
@@ -23,9 +23,10 @@ async function postData(option) {
     },
     body: JSON.stringify(data),
     })
-    .then(response => response.json())
+    .then(response => response)
     .then(result => {
-    console.log(result);
+      clearContent();
+      getData(option);
     })
     .catch(error => {
     console.error('Error:', error);
@@ -57,9 +58,9 @@ async function deteleData(option, id) {
     },
     body: JSON.stringify(id),
     })
-    .then(response => response.json())
+    .then(response => response)
     .then(result => {
-    console.log(result);
+    console.log("data eliminada");
     })
     .catch(error => {
     console.error('Error:', error);
